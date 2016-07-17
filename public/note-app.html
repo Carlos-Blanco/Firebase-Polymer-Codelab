@@ -5,13 +5,18 @@
 <dom-module id="note-app">
   <template>
     <style include="note-app-shared-styles"></style>
-    <na-toolbar></na-toolbar>
+    <na-toolbar
+      signed-in="[[signedIn]]"
+      on-sign-out="signOut">
+    </na-toolbar>
     <na-login></na-login>
   </template>
   <firebase-auth
     id="auth"
     app-name="notes"
-    provider="google">
+    provider="google"
+    signed-in="{{signedIn}}"
+    user="{{user}}">
 </firebase-auth>
   <script>
     Polymer({
