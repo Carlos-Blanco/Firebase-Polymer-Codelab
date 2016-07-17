@@ -8,6 +8,11 @@
     <na-toolbar></na-toolbar>
     <na-login></na-login>
   </template>
+  <firebase-auth
+    id="auth"
+    app-name="notes"
+    provider="google">
+</firebase-auth>
   <script>
     Polymer({
       is: 'note-app'
