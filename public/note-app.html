@@ -25,7 +25,12 @@
   <script>
     Polymer({
       is: 'note-app',
-      behaviors: [Polymer.NoteAppBehavior]
+
+      behaviors: [Polymer.NoteAppBehavior],
+
+      signIn: function() {
+        this.$.auth.signInWithPopup();
+      }
     });
   </script>
 </dom-module>
