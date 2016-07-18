@@ -34,7 +34,7 @@
     </na-editor>
     <firebase-document
       id="document"
-      app-name="notes"
+      app-name="codelab"
       path="[[editableNoteId]]"
       data="{{editableNote}}">
     </firebase-document>
@@ -52,7 +52,7 @@
       get notesPath() {
       return '/notes/' + this.user.uid;
       },
-      
+
       toEditableId: function(noteId) {
         return this.notesPath + '/' + noteId;
       }
