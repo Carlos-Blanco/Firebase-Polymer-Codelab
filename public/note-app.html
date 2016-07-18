@@ -47,6 +47,14 @@
 
       signIn: function() {
         this.$.auth.signInWithPopup();
+      },
+
+      get notesPath() {
+      return '/notes/' + this.user.uid;
+      },
+      
+      toEditableId: function(noteId) {
+        return this.notesPath + '/' + noteId;
       }
     });
   </script>
