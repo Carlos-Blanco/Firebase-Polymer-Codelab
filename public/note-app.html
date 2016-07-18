@@ -72,11 +72,15 @@
       },
 
       get notesPath() {
-      return '/notes/' + this.user.uid;
+        return '/notes/' + this.user.uid;
       },
 
       toEditableId: function(noteId) {
         return this.notesPath + '/' + noteId;
+      },
+
+      get isEditable() {
+        return this.online;
       }
     });
   </script>
