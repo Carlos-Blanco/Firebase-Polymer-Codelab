@@ -27,6 +27,11 @@
       disabled="[[!online]]"
       aria-label="Add note">
     </paper-fab>
+    <na-editor
+      id="editor"
+      note="{{editableNote}}"
+      on-close="commitChange">
+    </na-editor>
   </template>
   <script>
     Polymer({
